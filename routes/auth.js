@@ -4,8 +4,8 @@ const router = express.Router();
 router.post('/login', (req, res) => {
   const { username, password } = req.body;
 
-  if (username === 'admin' && password === '123456') {
-    return res.json({ token: 'demo-token', role: 'admin' });
+  if (username === 'admin@example.com' && password === '123456') {
+    return res.json({ token: 'demo-token', role: 'admin@example.com' });
   }
 
   return res.status(401).json({ message: 'Sai thông tin đăng nhập' });
